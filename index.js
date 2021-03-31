@@ -86,12 +86,11 @@ Use the addFlavor function below to do the following:
     For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-
-let newFlavor = 'string'
-function addFlavor(newFlavor, arr) {
-    arrCopy.unshift(newFlavor)
-    console.log(arrCopy)
-};
+function addFlavor(array, x) {
+    array.unshift(x);
+    return array;
+}
+addFlavor(originalFlavors, 'Rainbow Sherbert');
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -143,14 +142,15 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(flavors, toRemove) {
-    for (i = 0; i < flavors.length; i++) {
-        if (flavors[i] === toRemove) {
-            flavors.splice(i, 1);
+function removeFlavorByName(array, x) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === x) {
+            array.splice(i, 1);
+            return array
         }
     }
-    return flavors
-};
+}
+
 
 
 
